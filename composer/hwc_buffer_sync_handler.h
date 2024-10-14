@@ -31,6 +31,7 @@
 #ifndef __HWC_BUFFER_SYNC_HANDLER_H__
 #define __HWC_BUFFER_SYNC_HANDLER_H__
 
+#include <cassert>
 #include <sys/mman.h>
 #include <fcntl.h>
 #include <core/sdm_types.h>
