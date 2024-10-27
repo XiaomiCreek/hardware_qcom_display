@@ -121,7 +121,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),bengal)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.enable_gl_backpressure=0
 endif
 
@@ -165,12 +165,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 ifeq ($(TARGET_HAS_QTI_OPTIMIZATIONS), true)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.disable_cache_manager=1 \
     debug.disable_screen_decorations=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=2
 else
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.disable_screen_decorations=0
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
