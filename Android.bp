@@ -26,7 +26,8 @@ qtidisplay_cc_defaults {
         "libcutils",
         "libutils",
     ],
-    header_libs: ["display_headers"],
+    header_libs: [
+        "//vendor/qcom/opensource/commonsys-intf/display:display_intf_headers","display_headers"],
     soong_config_variables: {
         drmpp: {
             cflags: ["-DPP_DRM_ENABLE"],
@@ -69,12 +70,12 @@ cc_library_headers {
     ],
     header_libs: [
         "libhardware_headers",
-        "display_intf_headers",
+        "//vendor/qcom/opensource/commonsys-intf/display:display_intf_headers",
         "display_debug_headers",
     ],
     export_header_lib_headers: [
         "libhardware_headers",
-        "display_intf_headers",
+        "//vendor/qcom/opensource/commonsys-intf/display:display_intf_headers",
         "display_debug_headers",
     ],
 }
